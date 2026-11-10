@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios</title>
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/styles/styles1.css">
+</head>
+<body>
+
+    <!-- Menú Lateral -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-circle-user fa-lg"></i>
+            <span>¡Hola, Usuario!</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#"><i class="fa-solid fa-clipboard-list"></i> Entradas</a></li>
+            <li><a href="#"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+            <li><a href="#"><i class="fa-solid fa-user-doctor"></i> Medicos</a></li>
+            <li><a href="#"><i class="fa-solid fa-vial-circle-check"></i> Estudios</a></li>
+            <li class="active"><a href="#"><i class="fa-solid fa-id-card"></i> Usuarios</a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <a href="#" class="btn-logout">
+                Cerrar Sesión <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </header>
+
+        <!-- Área de Contenido -->
+        <main class="content">
+            <h1 class="page-title">
+                <i class="fa-solid fa-users-rectangle fa-lg"></i> Lista de Usuarios
+            </h1>
+
+            <div class="toolbar">
+                <button class="btn-nuevo">Nuevo</button>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar">
+                </div>
+            </div>
+
+            <!-- Tabla de datos -->
+            <table class="table-container">
+                <thead>
+                    <tr>
+                        <th>Apellido materno</th>
+                        <th>Apellido paterno</th>
+                        <th>Nombre</th>
+                        <th>Nombre de Usuario</th>
+                        <th style="width: 80px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pearn</td>
+                        <td>Druce</td>
+                        <td>Corenda</td>
+                        <td>cdruce0</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit"><i class="fa-solid fa-user-pen"></i></button>
+                            <button class="btn-action btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Espine</td>
+                        <td>Gason</td>
+                        <td>Nicolas</td>
+                        <td>ngason1</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit"><i class="fa-solid fa-user-pen"></i></button>
+                            <button class="btn-action btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Redon</td>
+                        <td>Toppas</td>
+                        <td>Gabe</td>
+                        <td>gtoppas2</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit"><i class="fa-solid fa-user-pen"></i></button>
+                            <button class="btn-action btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Manjin</td>
+                        <td>Clyma</td>
+                        <td>Sawyere</td>
+                        <td>sclyma3</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit"><i class="fa-solid fa-user-pen"></i></button>
+                            <button class="btn-action btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Riddall</td>
+                        <td>Scholard</td>
+                        <td>Gardener</td>
+                        <td>gscholard4</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-edit"><i class="fa-solid fa-user-pen"></i></button>
+                            <button class="btn-action btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Paginación -->
+            <div class="table-footer">
+                <div class="pagination">
+                    <button><i class="fa-solid fa-backward-step"></i></button>
+                    <button><i class="fa-solid fa-caret-left"></i></button>
+                    <input type="text" value="1" readonly>
+                    <button><i class="fa-solid fa-caret-right"></i></button>
+                    <button><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+                <div class="info">
+                    1 - 5 of 5 items
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

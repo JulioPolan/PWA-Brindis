@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* --- Sidebar (Menú Lateral) --- */
+.sidebar {
+    width: 230px;
+    background-color: #cbebfa;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    background-color: #aae0f7;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #0b7194;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 25px;
+    color: #0c7fa8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-menu li a:hover {
+    color: #07526e;
+}
+
+/* Ítem activo ("Usuarios") */
+.sidebar-menu li.active a {
+    background-color: #ffffff;
+    color: #d94132;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: 15px;
+}
+
+/* --- Área Principal --- */
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Topbar / Encabezado */
+.topbar {
+    background-color: #ececec;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn-logout {
+    color: #d94132;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Contenido del Panel */
+.content {
+    padding: 30px 40px;
+    background-color: #ffffff;
+    flex: 1;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1b6885;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* Toolbar (Botón Nuevo + Buscador) */
+.toolbar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-nuevo {
+    background: linear-gradient(to bottom, #41D5FF, #008FB8);
+    color: white;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box i {
+    position: absolute;
+    left: 12px;
+    color: #888;
+    font-size: 14px;
+}
+
+.search-box input {
+    padding: 7px 15px 7px 32px;
+    border: 1px solid #bbb;
+    border-radius: 18px;
+    outline: none;
+    font-size: 14px;
+    width: 180px;
+}
+
+/* Tabla */
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.table-container th {
+    background-color: #dedede;
+    color: #333;
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.table-container td {
+    padding: 8px 10px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.table-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Acciones dentro de la tabla */
+.actions-cell {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-action {
+    border: none;
+    color: white;
+    padding: 5px 7px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-edit {
+    background-color: #8cc63f;
+}
+
+.btn-delete {
+    background-color: #d94132;
+}
+
+/* Paginador y Footer de tabla */
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #555;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.pagination button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    cursor: pointer;
+    color: #333;
+    font-size: 12px;
+}
+
+.pagination input {
+    width: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 3px;
+    font-size: 12px;
+}
