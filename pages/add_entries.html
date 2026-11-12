@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Entrada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/styles/modal_style.css">
+</head>
+<body>
+
+    <!-- Encabezado superior opcional para mantener consistencia -->
+    <header class="topbar">
+        <a href="../entries.html" class="btn-logout">
+            Volver <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </a>
+    </header>
+
+    <!-- Contenedor central -->
+    <main class="main-container">
+        <div class="card" style="max-width: 650px;">
+            <div class="card-header">
+                Nueva Entrada
+            </div>
+            
+            <div class="card-body">
+                <!-- Fila Paciente y Médico -->
+                <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                    <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                        <label style="font-weight: 600; font-size: 14px; color: #333;">Paciente</label>
+                        <div style="display: flex; gap: 8px; align-items: center;">
+                            <select style="flex: 1; padding: 7px 10px; border: 1px solid #ccc; border-radius: 18px; outline: none; font-size: 13px; background: #fff;">
+                                <option>--- Seleccionar ---</option>
+                            </select>
+                            <button class="btn-icon" style="background-color: #008FB8; color: white; border-radius: 50%; width: 28px; height: 28px;" title="Añadir Paciente">+</button>
+                        </div>
+                    </div>
+                    <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                        <label style="font-weight: 600; font-size: 14px; color: #333;">Medico</label>
+                        <div style="display: flex; gap: 8px; align-items: center;">
+                            <select style="flex: 1; padding: 7px 10px; border: 1px solid #ccc; border-radius: 18px; outline: none; font-size: 13px; background: #fff;">
+                                <option>--- Seleccionar ---</option>
+                            </select>
+                            <button class="btn-icon" style="background-color: #008FB8; color: white; border-radius: 50%; width: 28px; height: 28px;" title="Añadir Médico">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campo Estudio -->
+                <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;">
+                    <label style="font-weight: 600; font-size: 14px; color: #333;">Estudio</label>
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <select style="flex: 1; padding: 7px 10px; border: 1px solid #ccc; border-radius: 18px; outline: none; font-size: 13px; background: #fff;">
+                            <option>--- Seleccionar ---</option>
+                        </select>
+                        <button class="btn-icon" style="background-color: #008FB8; color: white; border-radius: 50%; width: 28px; height: 28px;" title="Añadir Estudio">+</button>
+                        <a href="add_study.html" class="btn-nuevo" style="background: linear-gradient(to bottom, #41D5FF, #008FB8); color: white; text-decoration: none; padding: 6px 20px; border-radius: 18px; font-weight: bold; font-size: 13px; display: inline-flex; align-items: center; justify-content: center;">Agregar</a>                    </div>
+                </div>
+
+                <!-- Tabla de Estudios en la Entrada -->
+                <table class="results-table" style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">Estudio</th>
+                            <th>Costo</th>
+                            <th>Tiempo Aprox.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: left;">Analisis de Sangre</td>
+                            <td style="text-align: center;">$50.00</td>
+                            <td style="text-align: center;">2 Hrs</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Tiempo y Formas de Entrega -->
+                <div style="display: flex; gap: 20px; margin-bottom: 25px;">
+                    <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                        <label style="font-weight: 600; font-size: 14px; color: #333;">Tiempo de Entrega</label>
+                        <div style="position: relative; display: flex; align-items: center;">
+                            <input type="text" value="10/13/2026 12:00" style="width: 100%; padding: 7px 10px; border: 1px solid #ccc; border-radius: 18px; outline: none; font-size: 13px;">
+                            <i class="fa-regular fa-calendar" style="position: absolute; right: 12px; color: #666;"></i>
+                        </div>
+                    </div>
+                    <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                        <label style="font-weight: 600; font-size: 14px; color: #333;">Formas de Entrega</label>
+                        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: #333; margin-top: 4px;">
+                            <label><input type="checkbox"> Impreso</label>
+                            <label><input type="checkbox" checked> Correo Electronico</label>
+                            <label><input type="checkbox" checked> Whatsapp</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones de Acción Footer -->
+                <div style="display: flex; justify-content: flex-end; gap: 10px; border-top: 1px solid #eee; padding-top: 20px;">
+                    <button style="background: linear-gradient(to bottom, #f0f0f0, #dcdcdc); border: 1px solid #ccc; color: #333; padding: 7px 20px; border-radius: 18px; font-weight: bold; cursor: pointer; font-size: 13px;">Cancelar</button>
+                    <button class="btn-nuevo" style="background: linear-gradient(to bottom, #41D5FF, #008FB8); color: white; border: none; padding: 7px 25px; border-radius: 18px; font-weight: bold; cursor: pointer; font-size: 13px;">Guardar</button>
+                </div>
+
+                <div class="bottom-blank-space"></div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Estudio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/styles/modal_style.css">
+</head>
+<body>
+
+    <!-- Encabezado superior opcional -->
+    <header class="topbar">
+        <a href="../entries.html" class="btn-logout">
+            Volver <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </a>
+    </header>
+
+    <!-- Contenedor central -->
+    <main class="main-container">
+        <div class="card" style="max-width: 480px;">
+            <div class="card-header">
+                Agregar Estudio
+            </div>
+            
+            <div class="card-body">
+                <!-- Nombre de Estudio -->
+                <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 15px;">
+                    <label style="font-weight: 600; font-size: 14px; color: #333;">Nombre de Estudio</label>
+                    <input type="text" placeholder="ej. Radiografia, Ecografia, Analisis..." style="width: 100%; padding: 7px 10px; border: 1px solid #ccc; border-radius: 18px; outline: none; font-size: 13px;">
+                </div>
+
+                <!-- Checkbox DICAM -->
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 15px; font-size: 13px; color: #333;">
+                    <input type="checkbox" id="dicam">
+                    <label for="dicam">¿Es DICAM?</label>
+                </div>
+
+                <!-- Descripción -->
+                <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 15px;">
+                    <label style="font-weight: 600; font-size: 14px; color: #333;">Descripción</label>
+                    <div style="position: relative; display: flex; align-items: center;">
+                        <input type="text" placeholder="ej. Análisis de Sangre" maxlength="50" style="width: 100%; padding: 7px 10px; border: 1px solid #ccc; border-radius: 18px; outline: none; font-size: 13px;">
+                        <span style="position: absolute; right: 12px; font-size: 11px; color: #888;">0/50</span>
+                    </div>
+                </div>
+
+                <!-- Tiempo y Costo -->
+                <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                    <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                        <label style="font-weight: 600; font-size: 14px; color: #333;">Tiempo</label>
+                        <input type="number" value="0" style="width: 100%; padding: 7px 10px; border: 1px solid #ccc; border-radius: 18px; outline: none; font-size: 13px;">
+                    </div>
+                    <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                        <label style="font-weight: 600; font-size: 14px; color: #333;">Costo</label>
+                        <input type="text" placeholder="ej. $50.00" style="width: 100%; padding: 7px 10px; border: 1px solid #ccc; border-radius: 18px; outline: none; font-size: 13px;">
+                    </div>
+                </div>
+
+                <!-- Radio Horas / Días -->
+                <div style="display: flex; gap: 20px; margin-bottom: 25px; font-size: 13px; color: #333;">
+                    <label><input type="radio" name="tipo_tiempo" checked> Horas</label>
+                    <label><input type="radio" name="tipo_tiempo"> Dias</label>
+                </div>
+
+                <!-- Botones de Acción Footer -->
+                <div style="display: flex; justify-content: flex-end; gap: 10px; border-top: 1px solid #eee; padding-top: 20px;">
+                    <button style="background: linear-gradient(to bottom, #f0f0f0, #dcdcdc); border: 1px solid #ccc; color: #333; padding: 7px 20px; border-radius: 18px; font-weight: bold; cursor: pointer; font-size: 13px;">Cancelar</button>
+                    <button class="btn-nuevo" style="background: linear-gradient(to bottom, #41D5FF, #008FB8); color: white; border: none; padding: 7px 25px; border-radius: 18px; font-weight: bold; cursor: pointer; font-size: 13px;">Guardar</button>
+                </div>
+
+                <div class="bottom-blank-space"></div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Entradas</title>
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/styles/styles1.css">
+</head>
+<body>
+
+    <!-- Menú Lateral -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-circle-user fa-lg"></i>
+            <span>¡Hola, Usuario!</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active"><a href="entries.html"><i class="fa-solid fa-clipboard-list"></i> Entradas</a></li>
+            <li><a href="#"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+            <li><a href="#"><i class="fa-solid fa-user-doctor"></i> Medicos</a></li>
+            <li><a href="#"><i class="fa-solid fa-vial-circle-check"></i> Estudios</a></li>
+            <li><a href="users.html"><i class="fa-solid fa-id-card"></i> Usuarios</a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <a href="login.html" class="btn-logout">
+                Cerrar Sesión <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </header>
+
+        <!-- Área de Contenido -->
+        <main class="content">
+            <!-- Fila del Título y los KPIs laterales -->
+            <div class="entries-header-row">
+                <h1 class="page-title" style="margin-bottom: 0;">
+                    <i class="fa-solid fa-clipboard-list fa-lg"></i> Lista de Entradas
+                </h1>
+                
+                <div class="kpi-container">
+                    <div class="kpi-item">
+                        <i class="fa-regular fa-calendar-days" style="color: #666;"></i>
+                        <span>Entradas Pendientes del Periodo</span>
+                        <span class="kpi-badge kpi-red">1</span>
+                    </div>
+                    <div class="kpi-item">
+                        <i class="fa-regular fa-calendar-days" style="color: #666;"></i>
+                        <span>Entradas Cerradas del Periodo</span>
+                        <span class="kpi-badge">4</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toolbar" style="margin-top: 25px;">
+                <a href="add_entries.html" class="btn-nuevo" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Nuevo</a>
+    
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar">
+            </div>
+            </div>
+
+            <!-- Tabla de datos -->
+            <table class="table-container">
+                <thead>
+                    <tr>
+                        <th>N° Orden</th>
+                        <th>Estudio</th>
+                        <th>Paciente</th>
+                        <th>Edad</th>
+                        <th>Genero</th>
+                        <th>Estado</th>
+                        <th>Fecha de registro</th>
+                        <th>Fecha de entrega</th>
+                        <th style="width: 100px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Analisis de Sangre</td>
+                        <td>Burch Castro</td>
+                        <td>57</td>
+                        <td>Masculino</td>
+                        <td>Cerrado</td>
+                        <td>2026-08-28 17:36:58</td>
+                        <td>2026-08-29 19:30:00</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-print" title="Imprimir/Subir"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                            <button class="btn-action btn-email" title="Correo"><i class="fa-solid fa-envelope"></i></button>
+                            <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Analisis de Sangre</td>
+                        <td>Ulrika Eke</td>
+                        <td>53</td>
+                        <td>Femenino</td>
+                        <td>Cerrado</td>
+                        <td>2026-08-31 21:23:11</td>
+                        <td>2026-09-01 08:00:00</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-print"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                            <button class="btn-action btn-email"><i class="fa-solid fa-envelope"></i></button>
+                            <button class="btn-action btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Analisis de Sangre</td>
+                        <td>Stacee Wellan</td>
+                        <td>76</td>
+                        <td>Femenino</td>
+                        <td>Cerrado</td>
+                        <td>2026-09-05 14:19:15</td>
+                        <td>2026-09-05 16:00:00</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-print"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                            <button class="btn-action btn-email"><i class="fa-solid fa-envelope"></i></button>
+                            <button class="btn-action btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <!-- Fila seleccionada / resaltada en amarillo como en tu mockup -->
+                    <tr style="background-color: #fff9c4;">
+                        <td>4</td>
+                        <td>Analisis de Sangre</td>
+                        <td>Fulanito Detal</td>
+                        <td>42</td>
+                        <td>Masculino</td>
+                        <td>Abierto</td>
+                        <td>2026-09-15 09:24:11</td>
+                        <td>2026-09-15 10:30:00</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-print"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                            <button class="btn-action btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Analisis de Sangre</td>
+                        <td>Nissie Pentony</td>
+                        <td>32</td>
+                        <td>Masculino</td>
+                        <td>Cerrado</td>
+                        <td>2026-09-15 08:10:22</td>
+                        <td>2026-09-15 10:00:00</td>
+                        <td class="actions-cell">
+                            <button class="btn-action btn-print"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                            <button class="btn-action btn-email"><i class="fa-solid fa-envelope"></i></button>
+                            <button class="btn-action btn-delete"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Paginación -->
+            <div class="table-footer">
+                <div class="pagination">
+                    <button><i class="fa-solid fa-backward-step"></i></button>
+                    <button><i class="fa-solid fa-caret-left"></i></button>
+                    <input type="text" value="1" readonly>
+                    <button><i class="fa-solid fa-caret-right"></i></button>
+                    <button><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+                <div class="info">
+                    1 - 5 of 5 items
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Pequeños estilos complementarios específicos para los KPIs de esta vista (puedes pasarlos a tu styles1.css si gustas) -->
+    <style>
+        .entries-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .kpi-container {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 13px;
+            color: #555;
+        }
+        .kpi-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+        .kpi-badge {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 1px 10px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 12px;
+            color: #333;
+            min-width: 25px;
+            text-align: center;
+        }
+        .kpi-red {
+            color: #d94132;
+            border-color: #f5c6cb;
+            background-color: #fdf7f7;
+        }
+        .btn-print { background-color: #0088cc; }
+        .btn-email { background-color: #f0a000; }
+    </style>
+</body>
+</html>
