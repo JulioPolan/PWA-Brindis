@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pacientes</title>
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/styles/styles1.css">
+</head>
+<body>
+
+    <!-- Menú Lateral -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-circle-user fa-lg"></i>
+            <span>¡Hola, Usuario!</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="entries.html"><i class="fa-solid fa-clipboard-list"></i> Entradas</a></li>
+            <li class="active"><a href="patients.html"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+            <li><a href="#"><i class="fa-solid fa-user-doctor"></i> Medicos</a></li>
+            <li><a href="#"><i class="fa-solid fa-vial-circle-check"></i> Estudios</a></li>
+            <li><a href="users.html"><i class="fa-solid fa-id-card"></i> Usuarios</a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <a href="login.html" class="btn-logout">
+                Cerrar Sesión <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </header>
+
+        <!-- Área de Contenido -->
+        <main class="content">
+            <h1 class="page-title">
+                <i class="fa-solid fa-user-injured fa-lg"></i> Lista de Pacientes
+            </h1>
+
+            <div class="toolbar">
+                <a href="patient_form.html" class="btn-nuevo" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Nuevo</a>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar">
+                </div>
+            </div>
+
+            <!-- Tabla de datos -->
+            <table class="table-container">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Apellido materno</th>
+                        <th>Apellido paterno</th>
+                        <th>Nombre</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Edad</th>
+                        <th>Genero</th>
+                        <th style="width: 80px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jard</td>
+                        <td>Axston</td>
+                        <td>Burch Castro</td>
+                        <td>1969-03-15</td>
+                        <td>57</td>
+                        <td>Masculino</td>
+                        <td class="actions-cell">
+                            <a href="patient_form.html" class="btn-action btn-edit" title="Editar" style="text-decoration: none;"><i class="fa-solid fa-user-pen"></i></a>
+                            <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Lucian</td>
+                        <td>Shewon</td>
+                        <td>Ulrika Eke</td>
+                        <td>1973-07-22</td>
+                        <td>53</td>
+                        <td>Femenino</td>
+                        <td class="actions-cell">
+                            <a href="patient_form.html" class="btn-action btn-edit" title="Editar" style="text-decoration: none;"><i class="fa-solid fa-user-pen"></i></a>
+                            <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Tanney</td>
+                        <td>Cropton</td>
+                        <td>Stacee Wellan</td>
+                        <td>1950-11-05</td>
+                        <td>76</td>
+                        <td>Femenino</td>
+                        <td class="actions-cell">
+                            <a href="patient_form.html" class="btn-action btn-edit" title="Editar" style="text-decoration: none;"><i class="fa-solid fa-user-pen"></i></a>
+                            <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Merrick</td>
+                        <td>Ezele</td>
+                        <td>Fulanito Detal</td>
+                        <td>1984-02-14</td>
+                        <td>42</td>
+                        <td>Masculino</td>
+                        <td class="actions-cell">
+                            <a href="patient_form.html" class="btn-action btn-edit" title="Editar" style="text-decoration: none;"><i class="fa-solid fa-user-pen"></i></a>
+                            <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Tove</td>
+                        <td>Bruins</td>
+                        <td>Nissie Pentony</td>
+                        <td>1994-09-30</td>
+                        <td>32</td>
+                        <td>Masculino</td>
+                        <td class="actions-cell">
+                            <a href="patient_form.html" class="btn-action btn-edit" title="Editar" style="text-decoration: none;"><i class="fa-solid fa-user-pen"></i></a>
+                            <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Paginación -->
+            <div class="table-footer">
+                <div class="pagination">
+                    <button><i class="fa-solid fa-backward-step"></i></button>
+                    <button><i class="fa-solid fa-caret-left"></i></button>
+                    <input type="text" value="1" readonly>
+                    <button><i class="fa-solid fa-caret-right"></i></button>
+                    <button><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+                <div class="info">
+                    1 - 5 of 5 items
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
