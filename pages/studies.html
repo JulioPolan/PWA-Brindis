@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Estudios</title>
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/styles/styles1.css">
+</head>
+<body>
+
+    <!-- Menú Lateral -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-circle-user fa-lg"></i>
+            <span>¡Hola, Usuario!</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="entries.html"><i class="fa-solid fa-clipboard-list"></i> Entradas</a></li>
+            <li><a href="patients.html"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+            <li><a href="#"><i class="fa-solid fa-user-doctor"></i> Medicos</a></li>
+            <li class="active"><a href="studies.html"><i class="fa-solid fa-vial-circle-check"></i> Estudios</a></li>
+            <li><a href="users.html"><i class="fa-solid fa-id-card"></i> Usuarios</a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <a href="login.html" class="btn-logout">
+                Cerrar Sesión <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </header>
+
+        <!-- Área de Contenido -->
+        <main class="content">
+            <h1 class="page-title">
+                <i class="fa-solid fa-vial-circle-check fa-lg"></i> Lista de Estudios
+            </h1>
+
+            <div class="toolbar">
+                <!-- Botón Nuevo que puede redirigir al modal de agregar estudio si deseas -->
+                <a href="add_study.html" class="btn-nuevo" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Nuevo</a>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar">
+                </div>
+            </div>
+
+            <!-- Tabla de datos -->
+            <table class="table-container">
+                <thead>
+                    <tr>
+                        <th style="text-align: left; padding-left: 20px;">Nombre</th>
+                        <th style="text-align: left;">Descripción</th>
+                        <th>Costo</th>
+                        <th>Tiempo de Analisis</th>
+                        <th style="width: 80px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left; padding-left: 20px;">Analisis de Sangre</td>
+                        <td style="text-align: left;">Análisis clínico de muestra de sangre.</td>
+                        <td>$50.00</td>
+                        <td>2 Hrs</td>
+                        <td class="actions-cell">
+                            <a href="add_study.html" class="btn-action btn-edit" title="Editar" style="text-decoration: none;"><i class="fa-solid fa-user-pen"></i></a>
+                            <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Paginación -->
+            <div class="table-footer">
+                <div class="pagination">
+                    <button><i class="fa-solid fa-backward-step"></i></button>
+                    <button><i class="fa-solid fa-caret-left"></i></button>
+                    <input type="text" value="1" readonly>
+                    <button><i class="fa-solid fa-caret-right"></i></button>
+                    <button><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+                <div class="info">
+                    1 - 1 of 1 items
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

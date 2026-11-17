@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Medicos</title>
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/styles/styles1.css">
+</head>
+<body>
+
+    <!-- Menú Lateral -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-circle-user fa-lg"></i>
+            <span>¡Hola, Usuario!</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="entries.html"><i class="fa-solid fa-clipboard-list"></i> Entradas</a></li>
+            <li><a href="patients.html"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+            <li class="active"><a href="doctors.html"><i class="fa-solid fa-user-doctor"></i> Medicos</a></li>
+            <li><a href="studies.html"><i class="fa-solid fa-vial-circle-check"></i> Estudios</a></li>
+            <li><a href="users.html"><i class="fa-solid fa-id-card"></i> Usuarios</a></li>
+            <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <div class="main-wrapper">
+        <!-- Topbar -->
+        <header class="topbar">
+            <a href="login.html" class="btn-logout">
+                Cerrar Sesión <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </header>
+
+        <!-- Área de Contenido -->
+        <main class="content">
+            <h1 class="page-title">
+                <i class="fa-solid fa-user-doctor fa-lg"></i> Lista de Medicos
+            </h1>
+
+            <div class="toolbar">
+                <a href="doctor_form.html" class="btn-nuevo" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Nuevo</a>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar">
+                </div>
+            </div>
+
+            <!-- Tabla de datos -->
+            <table class="table-container">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Apellido materno</th>
+                        <th>Apellido paterno</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Celular</th>
+                        <th style="width: 80px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Pearn</td>
+                        <td>Druce</td>
+                        <td>Corenda</td>
+                        <td>cdruce0@buzzfeed.com</td>
+                        <td>(607) 2834435</td>
+                        <td class="actions-cell">
+                        <a href="doctor_form.html" class="btn-action btn-edit" title="Editar" style="text-decoration: none;"><i class="fa-solid fa-user-pen"></i></a>                            
+                        <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Espine</td>
+                        <td>Gason</td>
+                        <td>Nicolas</td>
+                        <td>ngason1@dyndns.org</td>
+                        <td>(571) 6431823</td>
+                        <td class="actions-cell">
+                            <a href="doctor_form.html" class="btn-action btn-edit" title="Editar" style="text-decoration: none;"><i class="fa-solid fa-user-pen"></i></a>
+                            <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Redon</td>
+                        <td>Toppas</td>
+                        <td>Gabe</td>
+                        <td>gtoppas2@networksolutions.com</td>
+                        <td>(572) 6258578</td>
+                        <td class="actions-cell">
+                            <a href="doctor_form.html" class="btn-action btn-edit" title="Editar" style="text-decoration: none;"><i class="fa-solid fa-user-pen"></i></a>
+                            <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Manjin</td>
+                        <td>Clyma</td>
+                        <td>Sawyere</td>
+                        <td>sclyma3@intel.com</td>
+                        <td>(977) 8289772</td>
+                        <td class="actions-cell">
+                            <a href="doctor_form.html" class="btn-action btn-edit" title="Editar" style="text-decoration: none;"><i class="fa-solid fa-user-pen"></i></a>
+                            <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Riddall</td>
+                        <td>Scholard</td>
+                        <td>Gardener</td>
+                        <td>gscholard4@fastcompany.com</td>
+                        <td>(312) 5360125</td>
+                        <td class="actions-cell">
+                            <a href="doctor_form.html" class="btn-action btn-edit" title="Editar" style="text-decoration: none;"><i class="fa-solid fa-user-pen"></i></a>
+                            <button class="btn-action btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Paginación -->
+            <div class="table-footer">
+                <div class="pagination">
+                    <button><i class="fa-solid fa-backward-step"></i></button>
+                    <button><i class="fa-solid fa-caret-left"></i></button>
+                    <input type="text" value="1" readonly>
+                    <button><i class="fa-solid fa-caret-right"></i></button>
+                    <button><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+                <div class="info">
+                    1 - 5 of 5 items
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
