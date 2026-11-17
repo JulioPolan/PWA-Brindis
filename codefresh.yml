@@ -1,0 +1,39 @@
+version: '1.0'
+stages:
+  - "clone"
+  - "test"
+  - "build"
+  - "deploy"
+
+steps:
+  main_clone:
+    title: "Clonando Repositorio"
+    type: "git-clone"
+    repo: "tu-usuario/Ex-Labs" # Reemplaza con tu usuario y repositorio
+    revision: "main"
+    stage: "clone"
+
+  run_tests:
+    title: "Ejecutando Fase de Pruebas"
+    type: "freestyle"
+    stage: "test"
+    image: "node:18" # O la imagen que requiera tu entorno de pruebas
+    commands:
+      - "npm install"
+      - "npm test"
+
+  build_docker_image:
+    title: "Construyendo Imagen Docker"
+    type: "build"
+    stage: "build"
+    image_name: "ex-labs-app"
+    tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
+    dockerfile: "Dockerfile"
+
+  deploy_to_hosting:
+    title: "Desplegando Aplicación"
+    type: "freestyle"
+    stage: "deploy"
+    image: "alpine:latest"
+    commands:
+      - "echo 'Aquí puedes agregar el comando o script para conectar con tu servicio de hosting (Render, Supabase, etc.)'"
