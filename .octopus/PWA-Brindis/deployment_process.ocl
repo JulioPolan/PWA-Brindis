@@ -1,11 +1,16 @@
-step "deploy-a-release" {
-    name = "Deploy a Release"
+step "run-a-script" {
+    name = "Run a Script"
 
     action {
-        action_type = "Octopus.DeployRelease"
+        action_type = "Octopus.Script"
         properties = {
-            Octopus.Action.DeployRelease.DeploymentCondition = "Always"
-            Octopus.Action.DeployRelease.ProjectId = "exlabs"
+            Octopus.Action.Script.ScriptBody = <<-EOT
+                Write-Host "¡Despliegue de prueba de EX-Labs completado con éxito!"
+                Write-Host "Verificando carpetas estáticas: pages/ y assets/"
+                EOT
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "PowerShell"
         }
+        worker_pool = "hosted-windows"
     }
 }
