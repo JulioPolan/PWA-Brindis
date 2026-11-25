@@ -1,0 +1,50 @@
+<div class="login-split-container">
+  <!-- Panel izquierdo: área de imagen / ilustración -->
+  <div class="left-panel">
+    @if (heroImageUrl) {
+      <img [src]="heroImageUrl" alt="ExLABS" class="hero-image" />
+    } @else {
+      <div class="placeholder-icon" aria-hidden="true">
+        <svg viewBox="0 0 120 100" width="160" height="130">
+          <circle cx="84" cy="30" r="16" fill="#a6a6a6" />
+          <polygon points="10,88 45,42 74,76 86,62 110,88" fill="#a6a6a6" />
+        </svg>
+      </div>
+    }
+  </div>
+
+  <!-- Panel derecho: formulario de inicio de sesión -->
+  <div class="right-panel">
+    <div class="login-box">
+      <h1 class="brand-logo">ExLABS</h1>
+
+      <form (ngSubmit)="onLogin()" class="login-form" novalidate>
+        <input
+          type="text"
+          name="usuario"
+          [(ngModel)]="username"
+          placeholder="Usuario"
+          class="pill-input"
+          autocomplete="username"
+        />
+
+        <input
+          type="password"
+          name="contrasena"
+          [(ngModel)]="password"
+          placeholder="Contraseña"
+          class="pill-input"
+          autocomplete="current-password"
+        />
+
+        @if (errorMessage()) {
+          <p class="error-text">{{ errorMessage() }}</p>
+        }
+
+        <button type="submit" class="login-btn" [disabled]="isSubmitting()">
+          {{ isSubmitting() ? 'Iniciando...' : 'Iniciar Sesión' }}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
