@@ -1,1 +1,154 @@
-<p>medic-page works!</p>
+<aside class="sidebar" aria-label="Navegación principal">
+  <div class="sidebar-header">
+    <i class="fa-solid fa-circle-user fa-lg" aria-hidden="true"></i>
+    <span>¡Hola, Usuario!</span>
+  </div>
+  <nav aria-label="Menú principal">
+    <ul class="sidebar-menu">
+      <li><a href="entries.html"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> Entradas</a></li>
+      <li><a href="patients.html"><i class="fa-solid fa-user-injured" aria-hidden="true"></i> Pacientes</a></li>
+      <li class="active"><a href="doctors.html" aria-current="page"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i> Médicos</a></li>
+      <li><a href="studies.html"><i class="fa-solid fa-vial-circle-check" aria-hidden="true"></i> Estudios</a></li>
+      <li><a href="users.html"><i class="fa-solid fa-id-card" aria-hidden="true"></i> Usuarios</a></li>
+      <li><a href="settings.html"><i class="fa-solid fa-gear" aria-hidden="true"></i> Configuración</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<div class="main-wrapper">
+  <header class="topbar">
+    <a href="login.html" class="btn-logout">
+      Cerrar sesión <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
+    </a>
+  </header>
+
+  <main class="content">
+    <h1 class="page-title">
+      <i class="fa-solid fa-user-doctor fa-lg" aria-hidden="true"></i> Lista de médicos
+    </h1>
+
+    <div class="toolbar">
+      <a href="doctor_form.html" class="btn-nuevo">Nuevo</a>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" placeholder="Buscar" aria-label="Buscar médicos">
+      </div>
+    </div>
+
+    <table class="table-container">
+      <caption class="visually-hidden">Lista de médicos registrados</caption>
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Apellido materno</th>
+          <th scope="col">Apellido paterno</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Celular</th>
+          <th scope="col" aria-label="Acciones"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Pearn</td>
+          <td>Druce</td>
+          <td>Corenda</td>
+          <td>cdruce0@buzzfeed.com</td>
+          <td>(607) 2834435</td>
+          <td class="actions-cell">
+            <a href="doctor_form.html" class="btn-action btn-edit" aria-label="Editar médico Corenda Druce">
+              <i class="fa-solid fa-user-pen" aria-hidden="true"></i>
+            </a>
+            <button type="button" class="btn-action btn-delete" aria-label="Eliminar médico Corenda Druce">
+              <i class="fa-solid fa-trash" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Espine</td>
+          <td>Gason</td>
+          <td>Nicolas</td>
+          <td>ngason1@dyndns.org</td>
+          <td>(571) 6431823</td>
+          <td class="actions-cell">
+            <a href="doctor_form.html" class="btn-action btn-edit" aria-label="Editar médico Nicolas Gason">
+              <i class="fa-solid fa-user-pen" aria-hidden="true"></i>
+            </a>
+            <button type="button" class="btn-action btn-delete" aria-label="Eliminar médico Nicolas Gason">
+              <i class="fa-solid fa-trash" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Redon</td>
+          <td>Toppas</td>
+          <td>Gabe</td>
+          <td>gtoppas2@networksolutions.com</td>
+          <td>(572) 6258578</td>
+          <td class="actions-cell">
+            <a href="doctor_form.html" class="btn-action btn-edit" aria-label="Editar médico Gabe Toppas">
+              <i class="fa-solid fa-user-pen" aria-hidden="true"></i>
+            </a>
+            <button type="button" class="btn-action btn-delete" aria-label="Eliminar médico Gabe Toppas">
+              <i class="fa-solid fa-trash" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Manjin</td>
+          <td>Clyma</td>
+          <td>Sawyere</td>
+          <td>sclyma3@intel.com</td>
+          <td>(977) 8289772</td>
+          <td class="actions-cell">
+            <a href="doctor_form.html" class="btn-action btn-edit" aria-label="Editar médico Sawyere Clyma">
+              <i class="fa-solid fa-user-pen" aria-hidden="true"></i>
+            </a>
+            <button type="button" class="btn-action btn-delete" aria-label="Eliminar médico Sawyere Clyma">
+              <i class="fa-solid fa-trash" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Riddall</td>
+          <td>Scholard</td>
+          <td>Gardener</td>
+          <td>gscholard4@fastcompany.com</td>
+          <td>(312) 5360125</td>
+          <td class="actions-cell">
+            <a href="doctor_form.html" class="btn-action btn-edit" aria-label="Editar médico Gardener Scholard">
+              <i class="fa-solid fa-user-pen" aria-hidden="true"></i>
+            </a>
+            <button type="button" class="btn-action btn-delete" aria-label="Eliminar médico Gardener Scholard">
+              <i class="fa-solid fa-trash" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="table-footer">
+      <div class="pagination" aria-label="Paginación">
+        <button type="button" aria-label="Primera página" disabled>
+          <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
+        </button>
+        <button type="button" aria-label="Página anterior" disabled>
+          <i class="fa-solid fa-caret-left" aria-hidden="true"></i>
+        </button>
+        <input type="text" value="1" readonly aria-label="Página actual">
+        <button type="button" aria-label="Página siguiente" disabled>
+          <i class="fa-solid fa-caret-right" aria-hidden="true"></i>
+        </button>
+        <button type="button" aria-label="Última página" disabled>
+          <i class="fa-solid fa-forward-step" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="info">1–5 de 5 médicos</div>
+    </div>
+  </main>
+</div>
