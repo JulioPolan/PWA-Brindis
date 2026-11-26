@@ -11,4 +11,15 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class MainLayout {
   userName = signal('Usuario');
+  isSidebarOpen = signal(typeof window !== 'undefined' ? window.innerWidth > 768 : true);
+
+  toggleSidebar(): void {
+    this.isSidebarOpen.update((open) => !open);
+  }
+
+  closeSidebarOnMobile(): void {
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      this.isSidebarOpen.set(false);
+    }
+  }
 }

@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class LoginPage {
   private readonly router = inject(Router);
 
-  heroImageUrl: string | null = null; // Coloca aquí la ruta de tu imagen cuando la tengas lista
+  heroImageUrl: string | null = '/images/Exlabs-logo.jpg'; // Coloca aquí la ruta de tu imagen cuando la tengas lista
   username = '';
   password = '';
   errorMessage = signal<string | null>(null);
