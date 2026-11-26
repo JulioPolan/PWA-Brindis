@@ -1,0 +1,88 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f4f7f9;
+}
+
+.sidebar {
+  width: 245px;
+  min-width: 245px;
+  background-color: #cfeeff;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 12px;
+  box-sizing: border-box;
+  border-right: 1px solid #b5e2fa;
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 8px 10px;
+}
+
+.user-avatar {
+  color: #0b7ea8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.greeting-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #1a202c;
+}
+
+.sidebar-divider {
+  border: none;
+  border-top: 1.5px solid #4fa8cc;
+  margin: 4px -12px 20px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #0b7ea8;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.nav-item:hover:not(.active-item) {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Estado activo idéntico a la captura (píldora blanca + coral/naranja) */
+.nav-item.active-item {
+  background-color: #ffffff;
+  color: #f05123;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.main-content {
+  flex: 1;
+  padding: 28px 32px;
+  overflow-x: auto;
+}

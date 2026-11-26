@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -9,7 +10,9 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './login-page.html',
   styleUrl: './login-page.css'
 })
-export class LoginPageComponent {
+export class LoginPage {
+  private readonly router = inject(Router);
+
   heroImageUrl: string | null = null; // Coloca aquí la ruta de tu imagen cuando la tengas lista
   username = '';
   password = '';
@@ -25,9 +28,11 @@ export class LoginPageComponent {
     }
 
     this.isSubmitting.set(true);
-    // Aquí conectarás más adelante el servicio de autenticación web
+
+    // Aquí conectarás más adelante tu servicio real de autenticación web
     setTimeout(() => {
       this.isSubmitting.set(false);
-    }, 400);
+      this.router.navigate(['/entries']);
+    }, 300);
   }
 }

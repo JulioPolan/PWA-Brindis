@@ -1,0 +1,264 @@
+.entries-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #dcdcdc;
+  padding: 6px 18px;
+  margin: -28px -32px 20px;
+}
+
+.logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: #e53935;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  text-decoration: underline;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-icon {
+  color: #0b88b8;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #3a3a3a;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.left-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-new {
+  background: linear-gradient(180deg, #17b6e8 0%, #068ec0 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 28px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(6, 142, 192, 0.25);
+}
+
+.btn-new:hover {
+  filter: brightness(1.05);
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: #666666;
+  pointer-events: none;
+}
+
+.search-input {
+  height: 34px;
+  width: 195px;
+  padding: 0 12px 0 34px;
+  border: 1px solid #8a8a8a;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #068ec0;
+}
+
+.right-counters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.counter-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.counter-icon {
+  color: #0b88b8;
+}
+
+.counter-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.counter-badge {
+  min-width: 58px;
+  text-align: center;
+  padding: 2px 14px;
+  border: 1px solid #9ca3af;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background-color: #ffffff;
+}
+
+.counter-badge.pending {
+  color: #e53935;
+}
+
+.counter-badge.closed {
+  color: #111827;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #d1d5db;
+}
+
+.entries-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.entries-table thead th {
+  background-color: #d4d4d4;
+  color: #222222;
+  font-weight: 500;
+  padding: 10px 12px;
+  text-align: center;
+  border-right: 1px solid #e5e5e5;
+  white-space: nowrap;
+}
+
+.entries-table tbody td {
+  padding: 9px 12px;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+  white-space: nowrap;
+}
+
+.entries-table tbody tr.row-open {
+  background-color: #f6e79c;
+  font-weight: 700;
+}
+
+.action-buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.action-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-upload {
+  background-color: #0088cc;
+}
+
+.btn-send {
+  background-color: #f29d26;
+}
+
+.btn-delete {
+  background-color: #e52421;
+}
+
+.action-btn:hover {
+  filter: brightness(1.08);
+}
+
+.empty-row {
+  padding: 20px;
+  color: #6b7280;
+}
+
+.pagination-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.page-controls {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #9ca3af;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.page-btn {
+  background-color: #f3f4f6;
+  border: none;
+  border-right: 1px solid #d1d5db;
+  padding: 4px 9px;
+  cursor: pointer;
+  font-size: 0.82rem;
+}
+
+.page-btn:last-child {
+  border-right: none;
+}
+
+.page-current {
+  padding: 4px 11px;
+  background-color: #ffffff;
+  font-weight: 600;
+}
